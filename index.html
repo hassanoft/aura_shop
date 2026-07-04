@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURA SHOP — Boutique en ligne premium</title>
+<meta name="description" content="AURA SHOP, votre boutique en ligne : découvrez nos produits, commandez en un clic et recevez votre commande rapidement.">
+<link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader de page -->
+<div class="page-loader"><img src="assets/images/logo.jpg" class="logo-spin" alt="Chargement"></div>
+
+<!-- ===================== HEADER ===================== -->
+<div class="announce-bar" data-shop-desc>Livraison rapide partout en Côte d'Ivoire 🚚 — Commandez directement via WhatsApp</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <button class="icon-btn burger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.jpg" alt="AURA SHOP">
+      <span data-shop-name>AURA SHOP</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="produits.html">Produits</a>
+      <a href="produits.html?featured=1">Vedettes</a>
+      <a href="produits.html?promo=1">Promotions</a>
+    </nav>
+
+    <div class="header-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="global-search" placeholder="Rechercher un produit..." autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="mobile-search-btn" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn" data-open-cart aria-label="Panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-badge" style="display:none">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menu mobile -->
+<div class="mobile-nav-overlay"></div>
+<nav class="mobile-nav">
+  <button class="mn-close" aria-label="Fermer"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <a href="index.html">Accueil</a>
+  <a href="produits.html">Produits</a>
+  <a href="produits.html?featured=1">Vedettes</a>
+  <a href="produits.html?promo=1">Promotions</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow"><span class="dot"></span> Nouvelle collection disponible</div>
+      <h1>La qualité premium, <em>livrée</em> près de chez vous.</h1>
+      <p data-shop-desc>Découvrez une sélection soignée de produits, commandez en quelques clics et recevez votre commande directement via WhatsApp.</p>
+      <div class="hero-cta">
+        <a href="produits.html" class="btn btn-primary">
+          Découvrir les produits
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="produits.html?promo=1" class="btn btn-ghost">Voir les promotions</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>+500</strong><span>Clients satisfaits</span></div>
+        <div><strong>24h</strong><span>Livraison rapide</span></div>
+        <div><strong>100%</strong><span>Paiement sécurisé</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card" id="hero-highlight-card">
+        <div class="skeleton" style="aspect-ratio:1/1;border-radius:14px;margin-bottom:14px;"></div>
+        <div class="skeleton" style="height:16px;width:70%;margin-bottom:8px;border-radius:6px;"></div>
+        <div class="skeleton" style="height:14px;width:40%;border-radius:6px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- ===================== BANNIERES ===================== -->
+  <section id="banner-slider-wrap"></section>
+
+  <!-- ===================== CATEGORIES ===================== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Nos catégories</h2>
+        <p>Explorez notre boutique par univers de produits</p>
+      </div>
+    </div>
+    <div class="cat-grid" id="categories-grid">
+      <div class="cat-card"><div class="skeleton" style="width:52px;height:52px;border-radius:16px;margin:0 auto 12px;"></div><div class="skeleton" style="height:12px;width:70%;margin:0 auto;border-radius:4px;"></div></div>
+      <div class="cat-card"><div class="skeleton" style="width:52px;height:52px;border-radius:16px;margin:0 auto 12px;"></div><div class="skeleton" style="height:12px;width:70%;margin:0 auto;border-radius:4px;"></div></div>
+      <div class="cat-card"><div class="skeleton" style="width:52px;height:52px;border-radius:16px;margin:0 auto 12px;"></div><div class="skeleton" style="height:12px;width:70%;margin:0 auto;border-radius:4px;"></div></div>
+      <div class="cat-card"><div class="skeleton" style="width:52px;height:52px;border-radius:16px;margin:0 auto 12px;"></div><div class="skeleton" style="height:12px;width:70%;margin:0 auto;border-radius:4px;"></div></div>
+      <div class="cat-card"><div class="skeleton" style="width:52px;height:52px;border-radius:16px;margin:0 auto 12px;"></div><div class="skeleton" style="height:12px;width:70%;margin:0 auto;border-radius:4px;"></div></div>
+      <div class="cat-card"><div class="skeleton" style="width:52px;height:52px;border-radius:16px;margin:0 auto 12px;"></div><div class="skeleton" style="height:12px;width:70%;margin:0 auto;border-radius:4px;"></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUITS VEDETTES ===================== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Produits vedettes</h2>
+        <p>Notre sélection coup de cœur du moment</p>
+      </div>
+      <a href="produits.html?featured=1" class="section-link">Voir tout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="product-grid" id="featured-grid"></div>
+  </section>
+
+  <!-- ===================== BANNIERE PROMO ===================== -->
+  <section class="section" style="padding-top:0;">
+    <div class="promo-banner reveal">
+      <div class="pb-content">
+        <h3>Des promotions jusqu'à -50%</h3>
+        <p>Profitez de nos offres exclusives sur une sélection d'articles, disponibles pour une durée limitée.</p>
+        <a href="produits.html?promo=1" class="btn btn-accent">Voir les promotions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOUVEAUTES ===================== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Nouveautés</h2>
+        <p>Les derniers produits ajoutés à la boutique</p>
+      </div>
+      <a href="produits.html" class="section-link">Voir tout
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="product-grid" id="new-grid"></div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer" id="site-footer"></footer>
+
+<!-- ===================== PANIER (drawer) ===================== -->
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-header">
+    <h3>Mon panier</h3>
+    <button class="cart-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-footer" style="display:none;">
+    <div class="cart-row"><span>Articles</span><span id="cart-total-items">0</span></div>
+    <div class="cart-total-row"><span>Total</span><span id="cart-total-price">0 FCFA</span></div>
+    <button class="btn btn-dark btn-block" id="open-checkout">Commander sur WhatsApp</button>
+  </div>
+</aside>
+
+<!-- ===================== MODALE CHECKOUT ===================== -->
+<div class="modal-overlay" id="checkout-modal">
+  <div class="modal-box">
+    <h3>Finaliser la commande</h3>
+    <p class="modal-sub">Ces informations sont obligatoires pour garantir une livraison fiable.</p>
+    <form id="checkout-form" novalidate>
+      <div class="form-group">
+        <label for="cf-name">Nom et prénom <span class="req">*</span></label>
+        <input type="text" id="cf-name" placeholder="Ex : Sougue Hassan" autocomplete="name" required>
+        <span class="form-error">Merci de renseigner votre nom ET votre prénom complets.</span>
+      </div>
+      <div class="form-group">
+        <label for="cf-phone">Numéro de téléphone <span class="req">*</span></label>
+        <input type="tel" id="cf-phone" placeholder="Ex : 07 00 00 00 00 ou +225 07 00 00 00 00" autocomplete="tel" required>
+        <span class="form-error">Numéro invalide. Format attendu : 10 chiffres commençant par 0 (ex : 0700000000).</span>
+      </div>
+      <div class="form-group">
+        <label for="cf-address">Adresse de livraison <span class="req">*</span></label>
+        <input type="text" id="cf-address" placeholder="Ex : Cocody Angré, Rue des Jardins" autocomplete="street-address" required>
+        <span class="form-error">Merci de renseigner une adresse précise (quartier, rue, repère).</span>
+      </div>
+      <div class="form-group" id="gps-group">
+        <label>Position GPS <span class="req">*</span></label>
+        <button type="button" class="btn btn-outline btn-block" id="capture-gps-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Partager ma position GPS
+        </button>
+        <div class="gps-status" id="gps-status"></div>
+        <input type="hidden" id="cf-lat">
+        <input type="hidden" id="cf-lng">
+        <span class="form-error">La position GPS est obligatoire pour valider la commande.</span>
+      </div>
+      <div class="form-group">
+        <label for="cf-comment">Commentaire (optionnel)</label>
+        <textarea id="cf-comment" placeholder="Précisions sur votre commande..."></textarea>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:22px;">
+        <button type="button" class="btn btn-outline" data-close-checkout style="flex:1;">Annuler</button>
+        <button type="submit" class="btn btn-dark" style="flex:1;">Envoyer sur WhatsApp</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Boutons flottants -->
+<button class="back-to-top" aria-label="Retour en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+<a class="wa-float" href="https://wa.me/2250500525480" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 0C7.16 0 0 7.16 0 16c0 2.82.74 5.47 2.03 7.76L0 32l8.44-2.01A15.9 15.9 0 0 0 16 32c8.84 0 16-7.16 16-16S24.84 0 16 0zm0 29.3c-2.53 0-4.9-.7-6.93-1.93l-.5-.3-5.01 1.19 1.22-4.87-.32-.5A13.28 13.28 0 0 1 2.7 16C2.7 8.66 8.66 2.7 16 2.7S29.3 8.66 29.3 16 23.34 29.3 16 29.3zm7.3-9.9c-.4-.2-2.36-1.16-2.72-1.3-.37-.13-.63-.2-.9.2-.27.4-1.03 1.3-1.26 1.56-.23.27-.46.3-.86.1-.4-.2-1.67-.61-3.18-1.95-1.17-1.05-1.97-2.34-2.2-2.74-.23-.4-.02-.6.17-.8.18-.18.4-.46.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.9-2.17-1.24-2.97-.32-.78-.65-.67-.9-.68-.23-.01-.5-.01-.76-.01-.27 0-.7.1-1.06.5-.37.4-1.4 1.36-1.4 3.33 0 1.96 1.43 3.85 1.63 4.12.2.27 2.8 4.28 6.8 6 .95.4 1.7.65 2.27.83.95.3 1.82.26 2.5.16.76-.11 2.36-.96 2.7-1.9.33-.92.33-1.7.23-1.87-.1-.16-.36-.26-.76-.46z"/></svg>
+</a>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/search.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
